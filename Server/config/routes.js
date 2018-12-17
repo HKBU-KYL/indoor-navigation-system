@@ -28,8 +28,13 @@ module.exports.routes = {
     view: 'pages/homepage'
   },
 
-  'GET /getPath/:from/:to': 'PathController.getPath',
-  'POST /getPath/:from/:to': 'PathController.getPaths',
+  'GET /getPath/singleDestination/:from/:to': 'PathController.getPath',
+
+  'GET /getPath/mulitpleDestination/:from/:to': 'PathController.getPath_mulitpleDestination',
+
+  'GET /getPointDetail/:point': 'PathController.getPointDetail',
+
+  'GET /getPointDetail/:point/:from': 'PathController.getPointDetail',
 
   /***************************************************************************
   *                                                                          *

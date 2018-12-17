@@ -23,6 +23,12 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
+    name: { type: 'string' },
+    location: { type: 'json' },
+    image: { type: 'json' },
+    point: { type: 'json' },
+    relationship: { type: 'json' },
+
   },
 
 };
