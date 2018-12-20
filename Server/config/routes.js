@@ -28,13 +28,16 @@ module.exports.routes = {
     view: 'pages/homepage'
   },
 
-  'GET /getPath/singleDestination/:from/:to': 'PathController.getPath',
+  'GET /getPath/:from/:to': 'PathController.getPath',
+  'GET /getPath/:from/:to/:ios': 'PathController.getPath',
 
-  'GET /getPath/mulitpleDestination/:from/:to': 'PathController.getPath_mulitpleDestination',
-
-  'GET /getPointDetail/:point': 'PathController.getPointDetail',
+  // 'GET /getPointDetail/:point': 'PathController.getPointDetail',
 
   'GET /getPointDetail/:point/:from': 'PathController.getPointDetail',
+
+  // 'GET /getPath/singleDestination/:from/:to/:ios': 'PathController.getPath',
+
+
 
   /***************************************************************************
   *                                                                          *

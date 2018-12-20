@@ -17,6 +17,7 @@ module.exports = {
 
         var from = req.params.from;
         var to   = req.params.to;
+        var ios = req.params.ios;
 
         console.log('from: ' + from + ', to: ' + to);
 
@@ -26,6 +27,17 @@ module.exports = {
 
         console.log('Finish quering with the value is ' + path);
         console.log('//////////////////////////////////////////////////');
+
+        if(ios == 'ios') {
+
+            if(!path){
+                return res.view('pages/route', {layout: null, 'msg': 'No Found'});
+            }
+
+            return res.view('pages/route', { layout: null, 'path':path, 'msg': "From " + from + " > " + to + "   ~ " });
+        }
+
+        
 
         return res.ok(path);
     },
