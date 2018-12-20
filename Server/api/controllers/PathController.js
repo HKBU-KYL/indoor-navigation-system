@@ -34,7 +34,7 @@ module.exports = {
                 return res.view('pages/route', {layout: null, 'msg': 'No Found'});
             }
 
-            return res.view('pages/route', { layout: null, 'path':path, 'msg': "From " + from + " > " + to + "   ~ " });
+            return res.view('pages/route', { layout: null, 'path':path, 'msg': from + " > " + to + "   ~ " });
         }
 
         
