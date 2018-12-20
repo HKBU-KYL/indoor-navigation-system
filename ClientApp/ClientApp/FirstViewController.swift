@@ -19,11 +19,13 @@ class FirstViewController: UIViewController {
     @IBOutlet var search_stop: UISearchBar!
     @IBAction func search_btn(_ sender: Any) {
         
+        self.view.endEditing(true)
+        
 //        label.text = ("Start from \(search_start.text ?? "nil") end with \(search_stop.text ?? "nil")")
 //        label.numberOfLines = 0
         
 //        let url = URL(string: "http://101.78.175.101:4981/getPath/\(search_start.text ?? "nil")/\(search_stop.text ?? "nil")/ios")
-        let url = URL(string: "http://127.0.0.1:1337/getPath/\(search_start.text ?? "nil")/\(search_stop.text ?? "nil")/ios")
+        let url = URL(string: "http://101.78.175.101:4981/getPath/\(search_start.text ?? "nil")/\(search_stop.text ?? "nil")/ios")
         let request = URLRequest(url: url!)
         
         webView.load(request)
@@ -35,7 +37,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = "http://101.78.175.101:4981/getPath/singleDestination/RRS701/RRS702"
+        let url = "http://101.78.175.101:4981/getPath/RRS701/RRS702"
         
         Alamofire.request(url, method: .get).validate().responseJSON { response in
             
